@@ -22,7 +22,7 @@ body {
 
 .footer {
     grid-area: footer;
-    background: whitesmoke;
+    background: rgb(136, 104, 104)url("../images/wet.jpg");
 }
 
 .container {
@@ -78,10 +78,14 @@ nav li a:hover {
 .hero img {
     width: 200px;
 }
+.hero h1 {
+    font-family: 'Vast Shadow', cursive;
+}
 
 .hero p {
     font-weight: 300;
     line-height: 1.8em;
+    font-family: 'Love Ya Like A Sister', cursive;
     color:whitesmoke;
 }
 
@@ -122,4 +126,47 @@ footer ul li {
 footer ul li a {
     text-decoration: none;
 
+}
+
+@media(min-width: 1040px) {
+    .container {
+        grid-template-areas: 
+        "sidebar content"
+        "sidebar footer";
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 1fr auto;
+    }
+    .side ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .sidebar {
+        background-image:  linear-gradient(to left bottom,
+    #383838, #3b3656, #3b3373, #3a2e90, #3a25ad,
+    #353ec8, #2856e4, #006dff, #009bff, #00c0ff,
+    #42def7, #acf8f3);
+    padding-top: 3em;
+    }
+    .hero {
+        text-align: left;
+        margin: 2em auto;
+    }
+    .hero img {
+        width: 250px;
+        float: right;
+    }
+    .hero h1 {
+        font-size: 3em;
+    }
+    .hero p {
+        width: 60%;
+    }
+    .footer {
+        background: url("../images/wet.jpg");
+    }
+    svg {
+        width: 60%;
+    }
+    
 }
