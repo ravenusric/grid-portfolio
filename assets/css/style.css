@@ -1,0 +1,125 @@
+body {
+    background: rgb(0, 255,255, 25%);
+
+}
+
+.content {
+    grid-area: content;
+    background: url("../images/waterdroplets.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-image:  linear-gradient(to left bottom,
+    #383838, #3b3656, #3b3373, #3a2e90, #3a25ad,
+    #353ec8, #2856e4, #006dff, #009bff, #00c0ff,
+    #42def7, #acf8f3);
+    justify-content: center;
+}
+
+.footer {
+    grid-area: footer;
+    background: whitesmoke;
+}
+
+.container {
+    display: grid;
+    font-size: 1.5em;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: 
+    "sidebar"
+    "content"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px 800px 250px;
+}
+
+.content,
+.footer,
+.sidebar {
+    padding: 1em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin:0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    padding: 1em 0;
+}
+
+nav li a {
+    color: whitesmoke;
+    font-weight: 700;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav li a:hover {
+    opacity: 1;
+}
+
+.hero {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero img {
+    width: 200px;
+}
+
+.hero p {
+    font-weight: 300;
+    line-height: 1.8em;
+    color:whitesmoke;
+}
+
+.action-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 700;
+    background-image:  linear-gradient(to left bottom,
+    #383838, #3b3656, #3b3373, #3a2e90, #3a25ad,
+    #353ec8, #2856e4, #006dff, #009bff, #00c0ff,
+    #42def7, #acf8f3);
+    padding: 0.5em 2em;
+    border-radius: 40px;
+    margin: 1em 0;
+    transition: 0.3s;
+}
+
+.action-btn:hover {
+    box-shadow: darkcyan;
+}
+
+footer ul {
+    max-width: 640px;
+    margin: 2em auto;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+footer ul li {
+    list-style: none;
+    align-self: flex-end;
+}
+
+footer ul li a {
+    text-decoration: none;
+
+}
