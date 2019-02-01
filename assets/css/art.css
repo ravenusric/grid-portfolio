@@ -1,0 +1,112 @@
+body {
+    max-width: 56em;
+    background-image: linear-gradient(to top, #595a66, #51525c, #494a53,
+     #414349, #3a3b40, #333539, #2c2e33, #25282c, #1d2225, #151c1e, #0d1617, #010f0e);
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    justify-content: center;
+    width: 100%;
+    font-size: x-large;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px;
+}
+
+nav li {
+    list-style: none;
+    padding: 1em 0;
+}
+
+nav li a {
+    color: whitesmoke;
+    font-weight: 700;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav li a:hover {
+    opacity: 1;
+}
+  
+  .grid {
+    /* Grid Fallback */
+    display: flex;
+    flex-wrap: wrap;
+    
+    /* Supports Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 1em;
+  }
+  
+  .module {
+    /* Demo-Specific Styles */
+    background: #575757;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border: 5px groove #8596A4;
+    
+    /* Flex Fallback */
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+  }
+
+  .thumbnail {
+      width: 240px;
+  }
+
+  .thumbnail:hover {
+    position:relative;
+    top:-25px;
+    margin: auto;
+    width: 250px;
+    height:300px;
+    display:block;
+    z-index:999;
+    border: 5px groove #8596A4;
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 6px 5px 10px 8px rgba(0,0,0,0.81); 
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 6px 5px 10px 8px rgba(0,0,0,0.81);
+}
+
+  @media(min-width: 1040px) {
+    body {
+        margin: 0 auto;
+        max-width: 56em;
+        background-image: linear-gradient(to top, #595a66, #51525c, #494a53,
+         #414349, #3a3b40, #333539, #2c2e33, #25282c, #1d2225, #151c1e, #0d1617, #010f0e);
+      }
+      .thumbnail:hover {
+        position:relative;
+        top:-25px;
+        left:-35px;
+        width:400px;
+        height:400px;
+        display:block;
+        z-index:999;
+        border: 5px groove #8596A4;
+        -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 6px 5px 10px 8px rgba(0,0,0,0.81); 
+        box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 6px 5px 10px 8px rgba(0,0,0,0.81);
+    }
+    .thumbnail{
+        width: 200px;
+    }
+}
+
+  
+  /* If Grid is supported, remove the margin we set for the fallback */
+  @supports (display: grid) {
+    .module {
+      margin: 0;
+    }
+  }

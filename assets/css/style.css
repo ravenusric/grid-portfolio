@@ -5,7 +5,7 @@ body {
 
 .content {
     grid-area: content;
-    background: url("../images/waterdroplets.png");
+    background: #006dff url("../images/dripwater.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,10 +13,8 @@ body {
 
 .sidebar {
     grid-area: sidebar;
-    background-image:  linear-gradient(to left bottom,
-    #383838, #3b3656, #3b3373, #3a2e90, #3a25ad,
-    #353ec8, #2856e4, #006dff, #009bff, #00c0ff,
-    #42def7, #acf8f3);
+    background-image: linear-gradient(to right top, #1b0351, #13387b, #2b679b,
+     #5d95b5, #9bc2cf, #91cbde, #83d5ed, #72defc, #00c0ff, #009bff, #006dff, #5207fd);
     justify-content: center;
 }
 
@@ -44,7 +42,7 @@ body {
     padding: 1em;
 }
 
-nav ul {
+ ul {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -79,7 +77,10 @@ nav li a:hover {
     width: 200px;
 }
 .hero h1 {
-    font-family: 'Vast Shadow', cursive;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+    color: #FFFFFF;
 }
 
 .hero p {
@@ -87,17 +88,19 @@ nav li a:hover {
     line-height: 1.8em;
     font-family: 'Love Ya Like A Sister', cursive;
     color:whitesmoke;
+    text-shadow: #474747 3px 5px 2px;
+    color: #FFFFFF;
 }
 
 .action-btn {
     display: inline-block;
     text-decoration: none;
-    color: whitesmoke;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+    color: #FFFFFF;
     font-weight: 700;
-    background-image:  linear-gradient(to left bottom,
-    #383838, #3b3656, #3b3373, #3a2e90, #3a25ad,
-    #353ec8, #2856e4, #006dff, #009bff, #00c0ff,
-    #42def7, #acf8f3);
+    background: url("../images/wet.jpg");
     padding: 0.5em 2em;
     border-radius: 40px;
     margin: 1em 0;
@@ -127,14 +130,34 @@ footer ul li a {
     text-decoration: none;
 
 }
+svg {
+    width: 50%;
+}
+.email {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+    -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+    color: #FFFFFF;
+    font-size: small;
+    margin-top: 40px;
+    font-family: 'Love Ya Like A Sister', cursive;
+
+}
 
 @media(min-width: 1040px) {
     .container {
         grid-template-areas: 
         "sidebar content"
         "sidebar footer";
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 5px 1fr;
         grid-template-rows: 1fr auto;
+    }
+    .content {
+        grid-area: content;
+        background: url("../images/wet.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .side ul {
         display: flex;
@@ -142,11 +165,9 @@ footer ul li a {
         flex-direction: column;
     }
     .sidebar {
-        background-image:  linear-gradient(to left bottom,
-    #383838, #3b3656, #3b3373, #3a2e90, #3a25ad,
-    #353ec8, #2856e4, #006dff, #009bff, #00c0ff,
-    #42def7, #acf8f3);
-    padding-top: 3em;
+        background-image: linear-gradient(to right top, #595a66, #51525c, #494a53, #414349,
+         #3a3b40, #333539, #2c2e33, #25282c, #1d2225, #151c1e, #0d1617, #010f0e);
+        padding-top: 3em;
     }
     .hero {
         text-align: left;
@@ -163,10 +184,51 @@ footer ul li a {
         width: 60%;
     }
     .footer {
-        background: url("../images/wet.jpg");
+        background-image: linear-gradient(to top, #595a66, #51525c, #494a53,
+         #414349, #3a3b40, #333539, #2c2e33, #25282c, #1d2225, #151c1e, #0d1617, #010f0e);
+    }
+    nav ul {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        margin:0;
+        padding: 0;
+    }
+    nav li a:hover {
+        opacity:200;
+        color: darkcyan;
     }
     svg {
         width: 60%;
+        
+    }
+    .email {
+        color: #FFFFFF;
+        text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+         -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+        color: #FFFFFF;
+        font-size: larger;
+        font-family: 'Love Ya Like A Sister', cursive;       
+    }
+    .action-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #FFFFFF;
+        text-shadow: 2px 2px 0 #4074b5, 2px -2px 0 #4074b5, -2px 2px 0 #4074b5,
+        -2px -2px 0 #4074b5, 2px 0px 0 #4074b5, 0px 2px 0 #4074b5, -2px 0px 0 #4074b5, 0px -2px 0 #4074b5;
+        color: #FFFFFF;
+        font-weight: 700;
+        background: dimgray;
+        padding: 0.5em 2em;
+        border-radius: 40px;
+        margin: 1em 0;
+        transition: 0.3s;
+        -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+        box-shadow: 5px 5px 15px 5px #000000;
+    }
+    
+    .action-btn:hover {
+        box-shadow: darkcyan;
     }
     
 }

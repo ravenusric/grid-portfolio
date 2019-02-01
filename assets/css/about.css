@@ -1,0 +1,80 @@
+article {
+    display: grid;
+    grid-template-columns: 
+      [full-start] minmax(1em, 1fr) 
+      [main-start] minmax(0, 56em) [main-end]
+      minmax(1em, 1fr) [full-end];
+    grid-gap: 1em;
+    font-family: 'Love Ya Like A Sister', cursive;       
+    
+  }
+  
+  section {
+    grid-column: main;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+  }
+  
+  figure {
+    grid-column: full;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+    box-shadow: 5px 5px 15px 5px #000000;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    justify-content: center;
+    width: 100%;
+    font-size: x-large;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 5px;
+}
+
+nav li {
+    list-style: none;
+    padding: 1em 0;
+}
+
+nav li a {
+    color: whitesmoke;
+    font-weight: 700;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav li a:hover {
+    opacity: 1;
+}
+  /* Added Styles */
+  .about-body {
+    background: linear-gradient(to left bottom,
+    #383838, #3b3656, #3b3373, #3a2e90, #3a25ad,
+    #353ec8, #2856e4, #006dff, #009bff, #00c0ff,
+    #42def7, #acf8f3);
+  }
+
+  body {
+    background-image: linear-gradient(to right top, #595a66, #51525c, #494a53, #414349,
+    #3a3b40, #333539, #2c2e33, #25282c, #1d2225, #151c1e, #0d1617, #010f0e);
+    padding-top: 3em;
+  }
+  
+  article > * {
+    background-color: #eaeaea2a;
+    padding: 2em;
+
+  }
+  
+  figure {
+    text-align: center;
+  }
+  
+  img {
+    max-width: 100%;
+  }
