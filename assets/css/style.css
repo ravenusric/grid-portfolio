@@ -236,7 +236,7 @@ svg {
         display: flex;
         font-size: 20px;
         text-align: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin:0;
         padding: 0;
     }
