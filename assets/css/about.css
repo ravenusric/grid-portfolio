@@ -11,7 +11,7 @@ article {
   }
   
   .about {
-    list-style: none;
+    list-style: circle;
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
@@ -100,3 +100,38 @@ nav li a:hover {
   img {
     max-width: 100%;
   }
+
+  @media(max-width: 360px) {
+    .about {
+      list-style: none;
+      -webkit-column-count: 3;
+      -moz-column-count: 3;
+      -webkit-column-gap: 20px;
+      font-size: small;
+      -moz-column-gap: 20px;
+      column-gap: 50px;
+      margin-left: -45px;
+      -webkit-column-rule: 1px solid rgba(28, 110, 164, 0.836);
+      -moz-column-rule: 1px solid rgba(28, 110, 164, 0.774);
+      column-rule: 1px solid rgba(1, 8, 14, 0.014);
+    }
+
+    article {
+      display: initial;
+      grid-template-columns: [full-start] minmax(1em, 1fr) 
+      [main-start] minmax(0, 56em) [main-end]
+      minmax(1em, 1fr) [full-end];
+      grid-gap: 1em;
+      font-family: 'Love Ya Like A Sister', cursive;
+      margin: 50px;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      justify-content: center;
+      width: 100%;
+      font-size: inherit;
+  }
+}
+  
+  
